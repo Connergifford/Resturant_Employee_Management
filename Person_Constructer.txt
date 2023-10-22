@@ -1,0 +1,44 @@
+using System;
+using System.Collection.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Resturant_Employee_Management
+{
+    internal class program
+    {
+        static void Main(string[] args)
+        {
+            Person_Class();
+            
+            Console.ReadLine();
+        }
+        
+        static void Person_Class()
+        {
+            Person person = new Person();
+            person.Name = "Jones";
+            person.Introduce();
+            
+            Person person1 = new Person();
+            person1.Name = "Phil";
+            person1.Say_Goodbye();
+
+            Person_with_Constructor employee2 = new Person_with_Constructor("Winston", 44, 5.8);
+            Person_with_Constructor employee3 = new Person_with_Constructor("Ben", 33, 6.5);
+            Person_with_Constructor employee4 = new Person_with_Constructor("Nick", 22, 4.8);
+            Person_with_Constructor employee5 = new Person_with_Constructor("Shane", 88, 5.5);
+            Person_with_Constructor employee6 = new Person_with_Constructor("Greg", 46, 6.2);
+            Person_with_Constructor employee7 = new Person_with_Constructor("Todd", 26, 5.2);
+            Person_with_Constructor employee8 = new Person_with_Constructor("Scott", 46, 4.9);
+            Person_with_Constructor employee9 = new Person_with_Constructor("James", 46, 6.1);
+            
+            foreach (var item in Person_with_Constructor.AllInstances)
+            {
+                item.Introduce();
+            }
+
+        }
+    }
+}
